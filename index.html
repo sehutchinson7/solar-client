@@ -15,11 +15,15 @@
       <h1>Boston Solar Project</h1>
       <div id="map"></div>
       <script>
+
         function initMap() {
-          map = new google.maps.Map(document.getElementById('map'), {
+          let layout = {
             center: {lat: 42.3601, lng: -71.0589},
             zoom: 8
-          });
+          }
+
+          const map = new
+          google.maps.Map(document.getElementById('map'), layout);
         }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO7m3LI4RH7p04LWKjH4pJirUz8HuJ_j8&callback=initMap"
