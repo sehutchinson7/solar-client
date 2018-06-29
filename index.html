@@ -10,23 +10,78 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBISZ4PB-UHO9z7IsuOeaWbRvo10eL2tlY&libraries=places&callback=initAutocomplete"
+      async defer></script>
     </head>
     <body>
       <h1>Boston Solar Project</h1>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
       <div id="map"></div>
       <script>
-
-        function initMap() {
-          let layout = {
+        function initAutocomplete() {
+          // Set layout for map
+          let map = new google.maps.Map(document.getElementById('map'), {
+            // Coordinates for Boston
             center: {lat: 42.3601, lng: -71.0589},
-            zoom: 13
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+          });
+
+          // Create a search box so a user can find their address
+          let input = document.getElementById('pac-input');
+          let searchBox = new google.maps.places.SearchBox(input);
+          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+          // Bias the SearchBox results towards current map's viewport.
+          map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+          })
+
+        let markers = [];
+          searchBox.addListener('places_changed', function() {
+          let places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
           }
 
-          const map = new
-          google.maps.Map(document.getElementById('map'), layout);
-        }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO7m3LI4RH7p04LWKjH4pJirUz8HuJ_j8&callback=initMap"
-        async defer></script>
+          markers.forEach(function(marker) {
+          marker.setMap(null);
+        });
+        markers = [];
+
+        const bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            let icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+      </script>
     </body>
 </html>
