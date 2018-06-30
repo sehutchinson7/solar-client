@@ -10,7 +10,7 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBISZ4PB-UHO9z7IsuOeaWbRvo10eL2tlY&libraries=places&callback=initAutocomplete"
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBISZ4PB-UHO9z7IsuOeaWbRvo10eL2tlY&libraries=places,drawing&callback=initAutocomplete"
       async defer></script>
     </head>
     <body>
@@ -37,6 +37,7 @@
             searchBox.setBounds(map.getBounds());
           })
 
+        // Add a marker to appear next to the address location
         let markers = [];
           searchBox.addListener('places_changed', function() {
           let places = searchBox.getPlaces();
@@ -81,7 +82,40 @@
           });
           map.fitBounds(bounds);
         });
+
+        // Create a drawing manager so a user can draw over the map
+        // Later build this out for the solar calculator
+        let drawingManager = new google.maps.drawing.DrawingManager({
+        // drawingMode: google.maps.drawing.OverlayType.MARKER,
+        drawingControl: true,
+        drawingControlOptions: {
+          position: google.maps.ControlPosition.TOP_CENTER,
+          // Allow the user to either draw a rectangle or custom polygon
+          drawingModes: ['polygon', 'rectangle']
+        },
+        rectangleOptions: {
+          fillColor: '#FFA500',
+          fillOpacity: 0.6,
+          strokeWeight: 2,
+          strokeColor: '#D32704',
+          clickable: true,
+          editable: true,
+          zIndex: 1
+        },
+        polygonOptions: {
+          fillColor: '#FFA500',
+          fillOpacity: 0.6,
+          strokeWeight: 2,
+          strokeColor: '#D32704',
+          clickable: true,
+          editable: true,
+          zIndex: 1
+        },
+      });
+      drawingManager.setMap(map);
       }
       </script>
+      <!-- <script src=`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=drawing&callback=initAutocomplete`
+     async defer></script> -->
     </body>
 </html>
