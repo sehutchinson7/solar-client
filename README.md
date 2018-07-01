@@ -45,8 +45,8 @@
 <ol>
   <li>Fork and clone this repository.</li>
   <li>Change into the new directory.</li>
-  <li>Install dependencies by running `npm install` within the repository.</li>
-  <li>In a separate terminal window, run `grunt serve` from within the same repository.</li>
+  <li>Install dependencies by running <code>npm install</code> within the repository.</li>
+  <li>In a separate terminal window, run <code>grunt serve</code> from within the same repository.</li>
   <li>Navigate to local host on your browser to view webpage.</li>
 </ol>
 <h3> Next Steps: </h3>
