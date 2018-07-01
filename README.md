@@ -41,11 +41,10 @@
   <li>As a developer, I want to create an intuitive, user-frienly UI experience for the user.</li>
 <h5>Data Preprocessing </h5>
 
-
 <h5>Development</h5>
 
 <h3> Next Steps: </h3>
 
-
 For inquires, contact: sara@hutchinsonGIS.com
+
 </ul>
