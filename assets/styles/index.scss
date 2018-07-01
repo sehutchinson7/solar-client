@@ -1,13 +1,30 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-color: #333;
+}
+
+h1 {
+  color: #ffa500;
+  font-size: 36px;
+  margin-top: 26px;
+}
+
+img {
+  float: left;
+  height: 74px;
+  padding-left: 62px;
+  padding-top: 20px;
+}
+
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
   height: 600px;
   width: 100%;
 }
-/* Optional: Makes the sample page fill the window. */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -17,13 +34,12 @@ html, body {
 #pac-input {
   background-color: #fff;
   font-size: 15px;
-  font-weight: 300;
   margin-left: 12px;
-  padding: 0 11px 0 13px;
+  padding: 0 20px 0 13px;
   text-overflow: ellipsis;
   width: 400px;
   font-weight: bold;
-  font-color: #4169e1;
+  color: #4169e1;
 }
 
 #infowindow-content .title {
