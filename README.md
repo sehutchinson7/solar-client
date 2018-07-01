@@ -56,7 +56,7 @@
 
 <p>Next steps will also focus on researching and gathering the appropriate datasets. Potential Data sources for the project might include lidar data, elevation/Digital Elevation Models (DEM), etc. It would also be beneficial to include a shapefile (geojson) of existing solar panel installations in the area.</p>
 
-<p>Solar panel data for 2014 was downloaded from the City of Cambriedge, imported into QGIS and converted to geojson. The goal is to overlay this data with the webmap so that a user can view solar panel installations within their neighborhood or area of interest. Ideally, the project would incorporate more recent solar installation data. This feature has not yet been deployed.</p>
+<p>Solar panel data for 2014 was downloaded from the City of Cambridge, imported into QGIS and converted to geojson. The goal is to overlay this data with the webmap so that a user can view solar panel installations within their neighborhood or area of interest. Ideally, the project would incorporate more recent solar installation data. This feature has not yet been deployed.</p>
 
 <p>Future development will work on creating a better UI experience for the user.</p>
 
