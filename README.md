@@ -1,5 +1,5 @@
 <h1><b>Boston Solar Mapping App</b></h1>
-<p> This is the client-side repo for the Boston Solar Mapping app.
+<p> This is the client-side repository for the Boston Solar Mapping app.
 <p>Check out the deplyed site: https://hutchinsonGIS.com/solar-client
 </p>
 </p>
@@ -12,6 +12,7 @@
   <li>CSS</li>
   <li>Google Maps API for Javascript</li>
   <li>Google Places API</li>
+  <li>Grunt/npm</li>
   <li>HTML</li>
   <li>Javascript</li>
 </ul>
@@ -22,6 +23,7 @@
 <p> The developer utilized white boarding and wireframes for organization and planning purposes:
 <ul>
   <li><a href="https://imgur.com/1wFsMGF">View Wireframe </a></li>
+  <li><a href="https://imgur.com/AynBARd">Planning</a></li>
 </ul>
 <h5>User Stories</h5>
 <ul>
@@ -50,7 +52,13 @@
   <li>Navigate to local host on your browser to view webpage.</li>
 </ol>
 <h3> Next Steps: </h3>
+<p>The next steps in project development will focus on gathering the appropriate data to assess and calculate nominal power of the drawn installation. A potential stepping stone to building a solar calculator would be to first calculate surface area of the drawn polygon using the geometry feature in Google Maps API for Javascript. </p>
 
+<p>Next steps will also focus on researching and gathering the appropriate datasets. Potential Data sources for the project might include lidar data, elevation/Digital Elevation Models (DEM), etc. It would also be beneficial to include a shapefile (geojson) of existing solar panel installations in the area.</p>
+
+<p>Solar panel data for 2014 was downloaded from the City of Cambriedge, imported into QGIS and converted to geojson. The goal is to overlay this data with the webmap so that a user can view solar panel installations within their neighborhood or area of interest. Ideally, the project would incorporate more recent solar installation data. This feature has not yet been deployed.</p>
+
+<p>Future development will work on creating a better UI experience for the user.</p>
 
 For inquires, contact: sara@hutchinsonGIS.com
 </ul>
