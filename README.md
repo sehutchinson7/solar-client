@@ -21,24 +21,24 @@
 <h5> Wireframes & User Stories</h5>
 <p> The developer utilized white boarding and wireframes for organization and planning purposes:
 <ul>
-  <li><a href="https://imgur.com/lAbB90k">View Wireframe </a></li>
+  <li><a href="https://imgur.com/1wFsMGF">View Wireframe </a></li>
 </ul>
 <h5>User Stories</h5>
 <ul>
-  <li>As a user, I want to search my address on a web map </li>
-  <li>As a user, I want to view my address using satellite imagery as the basemap</li>
-  <li>As a user, I want to draw a solar installation polygon over an area</li>
-  <li>As a user, I want to get the nominal power for the drawn installation</li>
+  <li>As a user, I want to search my address on a web map.</li>
+  <li>As a user, I want to view my address using satellite imagery as the basemap.</li>
+  <li>As a user, I want to draw a solar installation polygon over an area.</li>
+  <li>As a user, I want to get the nominal power for the drawn installation.</li>
 </ul>
 <h5>Developer Stories</h5>
 <ul>
   <li>As a developer, I want to utilize the Google Maps Javascript API for the webmap,
-  and display satellite imagery by default</li>
+  and display satellite imagery by default.</li>
   <li>As a developer, I want to use the Places API library to autocomplete places and addresses when a user begins typing into the search box.</li>
-  <li>As a developer I want to utilize the draw capabilities within the Google API to allow a user to draw a rectangle or customized polygon shape on the map</li>
-  <li>As a developer, I want to calculate solar pv based on the specified polygon dimensions</li>
+  <li>As a developer I want to utilize the draw capabilities within the Google API to allow a user to draw a rectangle or customized polygon shape on the map.</li>
+  <li>As a developer, I want to calculate solar pv based on the specified polygon dimensions.</li>
   <li>As a developer, I want to incorporate data that is relevant to assessing solar potential. For example, lidar, elevation, Digital Elevation Models (DEM), canopy cover, etc. </li>
-  <li>As a developer, I want to create an intuitive, user-frienly UI experience for the user</li>
+  <li>As a developer, I want to create an intuitive, user-frienly UI experience for the user.</li>
 <h5>Data Preprocessing </h5>
 
 
