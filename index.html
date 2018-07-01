@@ -97,7 +97,7 @@
         // drawingMode: google.maps.drawing.OverlayType.MARKER,
         drawingControl: true,
         drawingControlOptions: {
-          position: google.maps.ControlPosition.TOP_CENTER,
+          position: google.maps.ControlPosition.TOP_LEFT,
           // Allow the user to either draw a rectangle or custom polygon
           drawingModes: ['polygon', 'rectangle']
         },
@@ -120,7 +120,7 @@
           zIndex: 1
         },
       });
-      drawingManager.setMap(map);
+      drawingManager.setMap(map)
       }
       </script>
       <!-- <script src=`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=drawing&callback=initAutocomplete`
