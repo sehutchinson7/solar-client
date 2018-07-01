@@ -33,13 +33,16 @@ html, body {
 
 #pac-input {
   background-color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   margin-left: 12px;
   padding: 0 20px 0 13px;
   text-overflow: ellipsis;
   width: 400px;
   font-weight: bold;
-  color: #4169e1;
+  color: #4169e1 !important;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  top: 6px !important;
 }
 
 #infowindow-content .title {
